@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Airway Booking Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .form-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    .form-options div {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn-group {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    input[type="reset"] {
+      background-color: #f44336;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Airway Booking Form</h2>
+  <form action="#" method="post">
+
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label>Gender:</label>
+    <div class="form-options">
+      <div><input type="radio" id="male" name="gender" value="Male" required><label for="male">Male</label></div>
+      <div><input type="radio" id="female" name="gender" value="Female"><label for="female">Female</label></div>
+      <div><input type="radio" id="other" name="gender" value="Other"><label for="other">Other</label></div>
+    </div>
+
+    <label for="from">From (City/Airport):</label>
+    <input type="text" id="from" name="from" required>
+
+    <label for="to">To (City/Airport):</label>
+    <input type="text" id="to" name="to" required>
+
+    <label for="date">Departure Date:</label>
+    <input type="date" id="date" name="departure_date" required>
+
+    <label for="time">Departure Time:</label>
+    <input type="time" id="time" name="departure_time" required>
+
+    <label>Class of Travel:</label>
+    <div class="form-options">
+      <div><input type="radio" id="economy" name="class" value="Economy" required><label for="economy">Economy</label></div>
+      <div><input type="radio" id="business" name="class" value="Business"><label for="business">Business</label></div>
+      <div><input type="radio" id="first" name="class" value="First Class"><label for="first">First Class</label></div>
+    </div>
+
+    <label>Meal Preference:</label>
+    <div class="form-options">
+      <div><input type="checkbox" id="veg" name="meal[]" value="Vegetarian"><label for="veg">Vegetarian</label></div>
+      <div><input type="checkbox" id="nonveg" name="meal[]" value="Non-Vegetarian"><label for="nonveg">Non-Vegetarian</label></div>
+      <div><input type="checkbox" id="no-meal" name="meal[]" value="No Meal"><label for="no-meal">No Meal</label></div>
+    </div>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <div class="btn-group">
+      <input type="submit" value="Book Now">
+      <input type="reset" value="Reset">
+    </div>
+
+  </form>
+</div>
+
+</body>
+</html>
